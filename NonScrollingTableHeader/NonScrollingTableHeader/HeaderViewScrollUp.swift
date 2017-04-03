@@ -37,12 +37,12 @@ class HeaderViewReduceHeightAtScrollUpDelegate: NSObject {
         
         if let tableView = object as? UITableView {
             let newContentOffset = change?[.newKey] as! CGPoint
-            if newContentOffset.y >= 0 {
-                //Scrolling up
+            if newContentOffset.y > 0 {
+                //there has been a scroll change in the upward direction and scrollView is not just tracking
                 let oldContentOffset = change?[.oldKey] as! CGPoint
-                let offset = newContentOffset.y - oldContentOffset.y
-                if offset > 0 {
-                    //there has been a scroll change and scrollView is not just tracking
+                let offset = newContentOffset.y - oldContentOffset.y //highPositive - lowPositive = +ve
+                if offset > 0 //Scrolling up
+                {
                     let finalHeight = finalHeaderHeight(contentOffset: CGPoint(x: 0.0, y: offset),
                                                         contentInset: tableView.contentInset,
                                                         headerHeight: self.headerView.heightConstraint.constant,
