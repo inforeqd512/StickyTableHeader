@@ -16,6 +16,7 @@
 		6933A7E91E8F98530075B7FD /* NonScrollingTableHeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6933A7E81E8F98530075B7FD /* NonScrollingTableHeaderTests.swift */; };
 		6933A7F41E8F98530075B7FD /* NonScrollingTableHeaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6933A7F31E8F98530075B7FD /* NonScrollingTableHeaderUITests.swift */; };
 		6933A8021E8F98AF0075B7FD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6933A8011E8F98AF0075B7FD /* HeaderView.swift */; };
+		698DBE841E910ECB00F62822 /* HeaderViewScrollDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698DBE831E910ECB00F62822 /* HeaderViewScrollDown.swift */; };
 		69E3E2731E90705C00B2B840 /* HeaderViewScrollUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3E2721E90705C00B2B840 /* HeaderViewScrollUp.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		6933A7F31E8F98530075B7FD /* NonScrollingTableHeaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonScrollingTableHeaderUITests.swift; sourceTree = "<group>"; };
 		6933A7F51E8F98530075B7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6933A8011E8F98AF0075B7FD /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		698DBE831E910ECB00F62822 /* HeaderViewScrollDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderViewScrollDown.swift; sourceTree = "<group>"; };
 		69E3E2721E90705C00B2B840 /* HeaderViewScrollUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderViewScrollUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				6933A7D51E8F98530075B7FD /* ViewController.swift */,
 				6933A8011E8F98AF0075B7FD /* HeaderView.swift */,
 				69E3E2721E90705C00B2B840 /* HeaderViewScrollUp.swift */,
+				698DBE831E910ECB00F62822 /* HeaderViewScrollDown.swift */,
 				692B3FA01E8FAD1800694807 /* TableViewDataSource.swift */,
 				6933A7D71E8F98530075B7FD /* Main.storyboard */,
 				6933A7DA1E8F98530075B7FD /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				698DBE841E910ECB00F62822 /* HeaderViewScrollDown.swift in Sources */,
 				692B3FA11E8FAD1800694807 /* TableViewDataSource.swift in Sources */,
 				6933A7D61E8F98530075B7FD /* ViewController.swift in Sources */,
 				69E3E2731E90705C00B2B840 /* HeaderViewScrollUp.swift in Sources */,

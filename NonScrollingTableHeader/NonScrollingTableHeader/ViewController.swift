@@ -33,11 +33,14 @@ class ViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var headerViewReduceHeightAtScrollUpDelegate : HeaderViewReduceHeightAtScrollUpDelegate? = nil
-    
+    var headerViewExpandHeightAtScrollDownDelegate : HeaderViewExpandHeightAtScrollDownDelegate? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.headerViewReduceHeightAtScrollUpDelegate = HeaderViewReduceHeightAtScrollUpDelegate(headerView: self.headerView, scrollView: self.tableView)
+        self.headerViewExpandHeightAtScrollDownDelegate = HeaderViewExpandHeightAtScrollDownDelegate(headerView: self.headerView, scrollView: self.tableView)
+
     }
 
 }
