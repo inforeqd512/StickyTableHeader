@@ -24,6 +24,10 @@ import UIKit
  Since there is one KVO funnel method, so to implement SRP and OCP principle, have put that logic into HeaderViewReduceHeightAtScrollUpDelegate class so that when the user wants to know of how to change height during scroll, he looks at only this class. Also this class encapsuates all logic for just the height reduction so it's closed for change
  
  Views are defined in Storyboard or XIBs. So as to be able to derive as much information out of the autolayout system 
+ 
+ to give a parallax effect of the innerVIew increasing in size, the headerView insreases only till preferredMax. But now there is another inner Header View which has a bottom contraint to the headerView, which increases it's height per the stretch, so the items in it appear to expand. 
+ 
+ In order to give the effect correctly, the headerView now has to be above the TableView in the hierarchy so that the white background exposed by the scrollview when it's content scrolls down beyond its content offset of (0,0) is cov ered by the increasing inner header view
  */
 
 class ViewController: UIViewController, UITableViewDelegate {
