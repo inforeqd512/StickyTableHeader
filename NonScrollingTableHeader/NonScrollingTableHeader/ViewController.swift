@@ -17,7 +17,7 @@ import UIKit
     |
  TableView
  
- This arrangement will also ensure that as the header view shrinks in height, the tableview moves up along with it, so it looks to the user as one single unit
+ This arrangement will also ensure that as the header view shrinks in height, the tableview moves up along with it, so it looks to the user as one single unit. When this does happen, remember that as the headerView reduces it frame, the tableView's contentOffset (0,0) moves up and down with it
  
  Now to get the Header view to shrink in height continuously as the user is scrolling up, we have to use the kvo on contentOffset as scrollviewDidScroll vends very large increments of change in the offset
  
