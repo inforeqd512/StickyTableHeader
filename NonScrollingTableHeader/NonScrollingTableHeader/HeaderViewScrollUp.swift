@@ -103,7 +103,7 @@ class HeaderViewReduceHeightAtScrollUpDelegate: NSObject {
         if isHeaderOverstretched(headerView: headerView) { //if overstretch had occured on scroll down
             if isScrollingUp(newContentOffset: newContentOffset, oldContentOffset: oldContentOffset)
             {
-                return reducedConstantForOverstretchinHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: self.headerView, deltaOffsetOfUpwardScroll: offset)
+                return reducedConstantForOverstretchInHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: self.headerView, deltaOffsetOfUpwardScroll: offset)
             }
         }
         return headerView.headerViewBottomEqualInnerHeaderBottom.constant
@@ -142,7 +142,7 @@ class HeaderViewReduceHeightAtScrollUpDelegate: NSObject {
     ///   - headerView: headerView headerview set up with an inner headerview that actually stretches during overstretch and so should be normalised when scroll up happens
     ///   - deltaOffsetOfUpwardScroll: deltaOffsetOfUpwardScroll delta change in scrolling as a vector
     /// - Returns: new normalised constant value
-    func reducedConstantForOverstretchinHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: HeaderView, deltaOffsetOfUpwardScroll: CGFloat) -> CGFloat  {
+    func reducedConstantForOverstretchInHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: HeaderView, deltaOffsetOfUpwardScroll: CGFloat) -> CGFloat  {
         let overstretchVector = headerView.headerViewBottomEqualInnerHeaderBottom.constant
         var newOverstretchVector = overstretchVector + deltaOffsetOfUpwardScroll
         if newOverstretchVector > 0 {

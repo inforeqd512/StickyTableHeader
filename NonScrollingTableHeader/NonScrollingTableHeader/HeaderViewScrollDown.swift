@@ -97,7 +97,7 @@ class HeaderViewExpandHeightAtScrollDownDelegate: NSObject {
     func overstretchedValue(of headerView: HeaderView, by offset: CGFloat, newContentOffset : CGPoint, oldContentOffset : CGPoint) -> CGFloat {
         if needsOverstretching(for: headerView, preferredMaxHeight: headerView.preferredMaximumHeight) {
             if isScrollingDown(newContentOffset: newContentOffset, oldContentOffset: oldContentOffset) {
-                return increasedConstantForOverstretchinHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: headerView, deltaOffsetOfDownwardScroll: offset)
+                return increasedConstantForOverstretchInHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: headerView, deltaOffsetOfDownwardScroll: offset)
             }
         }
         
@@ -112,7 +112,7 @@ class HeaderViewExpandHeightAtScrollDownDelegate: NSObject {
         }
     }
 
-    func increasedConstantForOverstretchinHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: HeaderView, deltaOffsetOfDownwardScroll: CGFloat) -> CGFloat  {
+    func increasedConstantForOverstretchInHeaderViewBottomEqualInnerHeaderBottomConstraint(headerView: HeaderView, deltaOffsetOfDownwardScroll: CGFloat) -> CGFloat  {
         let overstretchVector = headerView.headerViewBottomEqualInnerHeaderBottom.constant
         let newOverstretchVector = overstretchVector + deltaOffsetOfDownwardScroll
         return newOverstretchVector
