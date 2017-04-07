@@ -3,7 +3,8 @@ In a TableView Controller, a TableView Header scrolls up with the table view. Th
 
 
 
-![Demo](https://cloud.githubusercontent.com/assets/4088886/24584651/879d184c-17b7-11e7-9b36-ddd346037527.gif)
+![Demo](https://cloud.githubusercontent.com/assets/4088886/24797762/1a5a6b18-1bd6-11e7-9d5a-f6c8763ce714.gif)
+
 
 When the headerview is set as the tables's header view, then it scrolls offscreen when the table scrolls
  to make the header Stick to the top of the screen it has to be kept separate from the tableView
