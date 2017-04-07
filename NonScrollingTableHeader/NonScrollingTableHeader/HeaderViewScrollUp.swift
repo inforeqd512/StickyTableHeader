@@ -40,6 +40,7 @@ class HeaderViewReduceHeightAtScrollUpDelegate: NSObject {
         //so have set up the headerViewBottomEqualInnerHeaderBottom for superview's bottom to equal inner header bottom so that the height change follows the scroll content offset sign change
 
         if let tableView = object as? UITableView {
+            
             let newContentOffset = change?[.newKey] as! CGPoint
             let oldContentOffset = change?[.oldKey] as! CGPoint
             
@@ -78,7 +79,7 @@ class HeaderViewReduceHeightAtScrollUpDelegate: NSObject {
         return headerView.heightConstraint.constant
     }
 
-    /// decidess if the scroll up is so that the real height of the headerView should decrease
+    /// decides if the scroll up is so that the real height of the headerView should decrease upto preferred min
     ///
     ///   - newContentOffset: newContentOffset new value as returned by KVO
     /// - Returns: true if height should decrease
@@ -117,21 +118,6 @@ class HeaderViewReduceHeightAtScrollUpDelegate: NSObject {
     func isScrollingUp(newContentOffset:CGPoint, oldContentOffset:CGPoint) -> Bool {
         let offset = newContentOffset.y - oldContentOffset.y
         if offset > 0 {
-            return true
-        }else{
-            return false
-        }
-    }
-    
-    /// informs if the user is scrolling down
-    ///
-    /// - Parameters:
-    ///   - newContentOffset: newContentOffset new value as returned by KVO
-    ///   - oldContentOffset: oldContentOffset old value that was , by KVO
-    /// - Returns: true if scrolling down
-    func isScrollingDown(newContentOffset:CGPoint, oldContentOffset:CGPoint) -> Bool {
-        let offset = newContentOffset.y - oldContentOffset.y
-        if offset < 0 {
             return true
         }else{
             return false
