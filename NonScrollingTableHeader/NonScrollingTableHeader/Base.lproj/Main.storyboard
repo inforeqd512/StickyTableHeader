@@ -51,13 +51,19 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hY3-3M-GMU" customClass="HeaderView" customModule="NonScrollingTableHeader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAb-c5-ru3" userLabel="Inner Header View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAb-c5-ru3" userLabel="Inner Header View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-t9-dyT">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Xaa-t9-dyT" secondAttribute="height" multiplier="15:8" id="rcp-AG-77n"/>
+                                                </constraints>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK1-OO-4L3">
-                                                <rect key="frame" x="166.5" y="54.5" width="42" height="21"/>
+                                                <rect key="frame" x="26" y="89" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -65,15 +71,19 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Xaa-t9-dyT" firstAttribute="width" secondItem="NAb-c5-ru3" secondAttribute="width" priority="750" id="B5M-l4-eWs"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xaa-t9-dyT" secondAttribute="bottom" id="bO6-yA-xJQ"/>
+                                            <constraint firstItem="Xaa-t9-dyT" firstAttribute="centerX" secondItem="NAb-c5-ru3" secondAttribute="centerX" id="fLR-21-vrr"/>
                                             <constraint firstItem="vK1-OO-4L3" firstAttribute="centerY" secondItem="NAb-c5-ru3" secondAttribute="centerY" id="pKd-mI-tDQ"/>
-                                            <constraint firstItem="vK1-OO-4L3" firstAttribute="centerX" secondItem="NAb-c5-ru3" secondAttribute="centerX" id="s2y-v5-hmG"/>
+                                            <constraint firstItem="vK1-OO-4L3" firstAttribute="centerX" secondItem="NAb-c5-ru3" secondAttribute="centerX" multiplier="0.25" id="s2y-v5-hmG"/>
+                                            <constraint firstItem="Xaa-t9-dyT" firstAttribute="top" relation="lessThanOrEqual" secondItem="NAb-c5-ru3" secondAttribute="top" id="t4h-6a-Nce"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NAb-c5-ru3" secondAttribute="trailing" id="30P-NX-Hbt"/>
-                                    <constraint firstAttribute="height" constant="130" id="4Ak-C5-jsD"/>
+                                    <constraint firstAttribute="height" constant="200" id="4Ak-C5-jsD"/>
                                     <constraint firstAttribute="bottom" secondItem="NAb-c5-ru3" secondAttribute="bottom" id="6lJ-kY-yoX"/>
                                     <constraint firstItem="NAb-c5-ru3" firstAttribute="top" secondItem="hY3-3M-GMU" secondAttribute="top" id="XkJ-IT-BX2"/>
                                     <constraint firstItem="NAb-c5-ru3" firstAttribute="leading" secondItem="hY3-3M-GMU" secondAttribute="leading" id="gd9-nq-f9U"/>
@@ -107,4 +117,7 @@
             <point key="canvasLocation" x="-623" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rose" width="213" height="133"/>
+    </resources>
 </document>
