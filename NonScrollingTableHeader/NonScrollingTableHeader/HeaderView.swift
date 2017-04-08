@@ -24,7 +24,7 @@ public class HeaderView : UIView {
 
     /// thought of getting this from the systemLayoutSizeFitting(UILayoutFittingCompressedSize), but since there is a height constraint, it cannot be derived like that
     lazy var preferredMinimumHeight : CGFloat = {
-        return CGFloat(40.0)
+        return CGFloat(60.0)
     }()
 
 }
