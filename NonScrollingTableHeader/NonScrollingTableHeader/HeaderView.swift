@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// the image is in the inner headerview is aspect fill, clips to bounds, center x align, equal width @750 so this breaks first, bottom, top space <= 0. This to give it the effect of image increasing in size as the header increases in height 
+
 public class HeaderView : UIView {
     
     @IBOutlet weak var label : UILabel!
