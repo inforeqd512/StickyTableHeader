@@ -108,6 +108,7 @@
                                     <constraint firstItem="NAb-c5-ru3" firstAttribute="leading" secondItem="hY3-3M-GMU" secondAttribute="leading" id="gd9-nq-f9U"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="contentView" destination="Jkd-9l-NmQ" id="pNi-vl-0Hs"/>
                                     <outlet property="headerViewBottomEqualInnerHeaderBottom" destination="6lJ-kY-yoX" id="eJn-OR-J4d"/>
                                     <outlet property="heightConstraint" destination="4Ak-C5-jsD" id="mX8-Pu-eLE"/>
                                     <outlet property="label" destination="vK1-OO-4L3" id="ixR-2W-dxS"/>
