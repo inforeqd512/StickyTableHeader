@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,20 +61,40 @@
                                                     <constraint firstAttribute="width" secondItem="Xaa-t9-dyT" secondAttribute="height" multiplier="15:8" id="rcp-AG-77n"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK1-OO-4L3">
-                                                <rect key="frame" x="26" y="89" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkd-9l-NmQ" userLabel="Content View">
+                                                <rect key="frame" x="20" y="49" width="103.5" height="102.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK1-OO-4L3">
+                                                        <rect key="frame" x="20" y="20" width="63.5" height="33.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmO-wd-Rlf">
+                                                        <rect key="frame" x="20" y="61.5" width="63.5" height="21"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="vK1-OO-4L3" firstAttribute="width" secondItem="jmO-wd-Rlf" secondAttribute="width" id="7on-a2-phe"/>
+                                                    <constraint firstItem="vK1-OO-4L3" firstAttribute="leading" secondItem="Jkd-9l-NmQ" secondAttribute="leading" constant="20" symbolic="YES" id="Cst-5g-IBI"/>
+                                                    <constraint firstItem="vK1-OO-4L3" firstAttribute="centerX" secondItem="jmO-wd-Rlf" secondAttribute="centerX" id="bik-mW-xP3"/>
+                                                    <constraint firstItem="vK1-OO-4L3" firstAttribute="top" secondItem="Jkd-9l-NmQ" secondAttribute="top" constant="20" symbolic="YES" id="eqs-9Y-GEn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vK1-OO-4L3" secondAttribute="trailing" constant="20" symbolic="YES" id="u1Q-Al-mYw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jmO-wd-Rlf" secondAttribute="bottom" constant="20" symbolic="YES" id="wUd-7Z-5wA"/>
+                                                    <constraint firstItem="jmO-wd-Rlf" firstAttribute="top" secondItem="vK1-OO-4L3" secondAttribute="bottom" constant="8" symbolic="YES" id="wVL-Gl-tTq"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Xaa-t9-dyT" firstAttribute="width" secondItem="NAb-c5-ru3" secondAttribute="width" priority="750" id="B5M-l4-eWs"/>
+                                            <constraint firstItem="Jkd-9l-NmQ" firstAttribute="centerY" secondItem="NAb-c5-ru3" secondAttribute="centerY" id="Z7k-hN-YO2"/>
                                             <constraint firstAttribute="bottom" secondItem="Xaa-t9-dyT" secondAttribute="bottom" id="bO6-yA-xJQ"/>
                                             <constraint firstItem="Xaa-t9-dyT" firstAttribute="centerX" secondItem="NAb-c5-ru3" secondAttribute="centerX" id="fLR-21-vrr"/>
-                                            <constraint firstItem="vK1-OO-4L3" firstAttribute="centerY" secondItem="NAb-c5-ru3" secondAttribute="centerY" id="pKd-mI-tDQ"/>
-                                            <constraint firstItem="vK1-OO-4L3" firstAttribute="centerX" secondItem="NAb-c5-ru3" secondAttribute="centerX" multiplier="0.25" id="s2y-v5-hmG"/>
+                                            <constraint firstItem="Jkd-9l-NmQ" firstAttribute="leading" secondItem="NAb-c5-ru3" secondAttribute="leading" constant="20" symbolic="YES" id="keX-LY-Sbp"/>
                                             <constraint firstItem="Xaa-t9-dyT" firstAttribute="top" relation="lessThanOrEqual" secondItem="NAb-c5-ru3" secondAttribute="top" id="t4h-6a-Nce"/>
                                         </constraints>
                                     </view>
@@ -114,7 +133,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="jrv-Le-NbU" customClass="TableViewDataSource" customModule="NonScrollingTableHeader" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-623" y="36"/>
+            <point key="canvasLocation" x="-623.20000000000005" y="35.532233883058474"/>
         </scene>
     </scenes>
     <resources>
